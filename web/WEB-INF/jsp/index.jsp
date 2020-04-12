@@ -1,0 +1,71 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<script>
+                        function getLinkJSONpt2() {
+                        var a,b,c;
+                        a = document.getElementById("inputa").value;
+                        b = document.getElementById("inputb").value;
+                        c = document.getElementById("inputc").value;
+                        window.open(window.location.protocol +"/Restfulapi/webresources/test/getdata/A="+a+"&B="+b+"&C="+c+"/data.json");
+                        }
+                        function getLinkXMLpt2() {
+                        var a,b,c;
+                        a = document.getElementById("inputa").value;
+                        b = document.getElementById("inputb").value;
+                        c = document.getElementById("inputc").value;
+                        window.open(window.location.protocol +"/Restfulapi/webresources/test/getdata/A="+a+"&B="+b+"&C="+c+"/data.xml");
+                        }
+                        function getLinkJSONyear() {
+                        var a;
+                        a = document.getElementById("inputyear").value;
+                        window.open(window.location.protocol +"/Restfulapi/webresources/test/getdata/year="+a+"/data.json");
+                        }
+                        function getLinkXMLyear() {
+                        var a;
+                        a = document.getElementById("inputyear").value;
+                        window.open(window.location.protocol +"/Restfulapi/webresources/test/getdata/year="+a+"/data.xml");
+                        }
+                        function getData()
+                        {
+                            document.getElementById("txt_apijsonpt2").innerHTML = window.location.protocol +"/Restfulapi/webresources/test/getdata/A={a}&B={b}&C={c}/data.json";
+                            document.getElementById("txt_apixmlpt2").innerHTML = window.location.protocol +"/Restfulapi/webresources/test/getdata/A={a}&B={b}&C={c}/data.xml";
+                            document.getElementById("txt_apijsonyear").innerHTML = window.location.protocol +"/Restfulapi/webresources/test/getdata/year={a}/data.json";
+                            document.getElementById("txt_apixmlyear").innerHTML = window.location.protocol +"/Restfulapi/webresources/test/getdata/year={a}/data.xml";
+                        }
+</script>
+
+<html>
+    <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Welcome to Spring Web MVC project</title>
+    </head>
+    <body>
+        <h1>Giải phương trình bậc 2</h1>
+        <a>ax² + bx + c = 0</a>
+        <form>
+        <label for="fname">a</label><br>
+        <input type="number" id="inputa" name="fname"><br>
+        <label for="lname">b</label><br>
+        <input type="number" id="inputb" name="lname"><br>
+        <label for="lname">c</label><br>
+        <input type="number" id="inputc" name="lname"><br>
+        <input type ="button" name="OKE" value="GETJSON" onclick="getLinkJSONpt2()">
+        <input type ="button" name="OKE" value="GETXML" onclick="getLinkXMLpt2()">
+        </form>
+                <h3>Api json pt2: </h3><h4 id="txt_apijsonpt2"></h4>
+                <h3>Api xml pt2: </h3><h4 id="txt_apixmlpt2"></h4>
+        <h1>Kiểm tra năm nhuần</h1>
+                <form>
+                    <label for="lname">Nhập năm</label><br>
+                    <input type="number" id="inputyear" name="lname"><br>
+                    <input type ="button" name="OKE" value="GETJSON" onclick="getLinkJSONyear()">
+                    <input type ="button" name="OKE" value="GETXML" onclick="getLinkXMLyear()">
+                </form>
+                <h3>Api json pt2: </h3><h4 id="txt_apijsonyear"></h4>
+                <h3>Api xml pt2: </h3><h4 id="txt_apixmlyear"></h4>
+            <script>getData();</script>
+    </body>
+</html>
