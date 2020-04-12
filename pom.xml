@@ -80,13 +80,6 @@
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.objectweb.asm/org.objectweb.asm -->
-<dependency>
-    <groupId>org.objectweb.asm</groupId>
-    <artifactId>org.objectweb.asm</artifactId>
-    <version>3.3.1.v201105211655</version>
-</dependency>
-    
 <dependency>
     <groupId>com.sun.jersey</groupId>
     <artifactId>jersey-server</artifactId>
